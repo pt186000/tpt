@@ -29,7 +29,7 @@ jobs:
       uses: Azure/functions-action@v1.1.8
       with:
         # Name of the Azure Function App
-        app-name: Function1
+        app-name: hellofn
         
         # Path to package or folder. *.zip or a folder to deploy
         package: dist
