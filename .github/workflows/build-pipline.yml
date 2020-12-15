@@ -25,17 +25,15 @@ jobs:
         #dotnet test --no-build --verbosity normal
         dotnet publish -c Release -o dist
         
-    - name: Azure Functions Action
+    - name: Publish to Azure Functions
       uses: Azure/functions-action@v1.1.8
       with:
         # Name of the Azure Function App
-        app-name: hellofn
+        app-name: HelloAzureFunctions
         
         # Path to package or folder. *.zip or a folder to deploy
         package: dist
 
         # Publish profile (*.publishsettings) file contents with web deploy secrets
         publish-profile: ${{ secrets.PUBLISH_PROFILE }}
-        
-        
         
